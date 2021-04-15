@@ -1,122 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TECH TALKS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <p>
-        Step 1: Create a GitHub account
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Texh Talks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupphttps://in.search.yahoo.com/yhs/search?hspart=ddc&hsimp=yhs-linuxmint&type=__alt__ddc_linuxmint_com&p=%7E&guccounter=1ortedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categary
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Smarphone</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    Laptop
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    Write for Us
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Contacts</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <p>
+           <h1> Step 1: Create a GitHub account </h1>
 
-The easiest way to get started is to create an account on GitHub.com (it's free).
+            The easiest way to get started is to create an account on GitHub.com (it's free).
 
-git_guide1.png
-Create a GitHub account
+            git_guide1.png
+            Create a GitHub account
 
-Pick a username (e.g., octocat123), enter your email address and a password, and click Sign up for GitHub. Once you are in, it will look something like this:
+            Pick a username (e.g., octocat123), enter your email address and a password, and click Sign up for GitHub.
+            Once
+            you are in, it will look something like this:
 
-git_guide2.png
-Signed in to GitHub
-Step 2: Create a new repository
+            git_guide2.png
+            Signed in to GitHub
+            <h1>Step 2: Create a new repository </h1>
 
-A repository is like a place or a container where something is stored; in this case we're creating a Git repository to store code. To create a new repository, select New Repository from the + sign dropdown menu (you can see I've selected it in the upper-right corner in the image above).
+            A repository is like a place or a container where something is stored; in this case we're creating a Git
+            repository to store code. To create a new repository, select New Repository from the + sign dropdown menu
+            (you
+            can see I've selected it in the upper-right corner in the image above).
 
-git_guide3.png
-Create a new repository
+            git_guide3.png
+            Create a new repository
 
-Enter a name for your repository (e.g, "Demo") and click Create Repository. Don't worry about changing any other options on this page.
+            Enter a name for your repository (e.g, "Demo") and click Create Repository. Don't worry about changing any
+            other
+            options on this page.
 
-Congratulations! You have set up your first repo on GitHub.com.
-Step 3: Create a file
+            Congratulations! You have set up your first repo on GitHub.com.
+          <h1>  Step 3: Create a file </h1>
 
-Once your repo is created, it will look like this:
+            Once your repo is created, it will look like this:
 
-git_guide4.png
-New repo on GitHub
+            git_guide4.png
+            New repo on GitHub
 
-Don't panic, it's simpler than it looks. Stay with me. Look at the section that starts "...or create a new repository on the command line," and ignore the rest for now.
+            Don't panic, it's simpler than it looks. Stay with me. Look at the section that starts "...or create a new
+            repository on the command line," and ignore the rest for now.
 
-Open the Terminal program on your computer.
+            Open the Terminal program on your computer.
 
-git_guide5.png
-Terminal
+            git_guide5.png
+            Terminal
 
-Type git and hit Enter. If it says command bash: git: command not found, then install Git with the command for your Linux operating system or distribution. Check the installation by typing git and hitting Enter; if it's installed, you should see a bunch of information about how you can use the command.
+            Type git and hit Enter. If it says command bash: git: command not found, then install Git with the command
+            for
+            your Linux operating system or distribution. Check the installation by typing git and hitting Enter; if it's
+            installed, you should see a bunch of information about how you can use the command.
 
-In the terminal, type:
+            In the terminal, type:
 
-mkdir Demo
+            mkdir Demo
 
-This command will create a directory (or folder) named Demo.
+            This command will create a directory (or folder) named Demo.
 
-Change your terminal to the Demo directory with the command:
+            Change your terminal to the Demo directory with the command:
 
-cd Demo
+            cd Demo
 
-Then enter:
+            Then enter:
 
-echo "#Demo" >> README.md
+            echo "#Demo" >> README.md
 
-This creates a file named README.md and writes #Demo in it. To check that the file was created successfully, enter:
+            This creates a file named README.md and writes #Demo in it. To check that the file was created successfully,
+            enter:
 
-cat README.md
+            cat README.md
 
-This will show you what is inside the README.md file, if the file was created correctly. Your terminal will look like this:
+            This will show you what is inside the README.md file, if the file was created correctly. Your terminal will
+            look
+            like this:
 
-git_guide7.png
-Terminal
+            git_guide7.png
+            Terminal
 
-To tell your computer that Demo is a directory managed by the Git program, enter:
+            To tell your computer that Demo is a directory managed by the Git program, enter:
 
-git init
+            git init
 
-Then, to tell the Git program you care about this file and want to track any changes from this point forward, enter:
+            Then, to tell the Git program you care about this file and want to track any changes from this point
+            forward,
+            enter:
 
-git add README.md
+            git add README.md
 
-Step 4: Make a commit
+          <h1>  Step 4: Make a commit </h1>
 
-Programming and development
+            Programming and development
 
-    Red Hat Developers Blog
-    Programming cheat sheets
-    Try for free: Red Hat Learning Subscription
-    What is an IDE?
+            Red Hat Developers Blog
+            Programming cheat sheets
+            Try for free: Red Hat Learning Subscription
+            What is an IDE?
 
-So far you've created a file and told Git about it, and now it's time to create a commit. Commit can be thought of as a milestone. Every time you accomplish some work, you can write a Git commit to store that version of your file, so you can go back later and see what it looked like at that point in time. Whenever you make a change to your file, you create a new version of that file, different from the previous one.
+            So far you've created a file and told Git about it, and now it's time to create a commit. Commit can be
+            thought
+            of as a milestone. Every time you accomplish some work, you can write a Git commit to store that version of
+            your
+            file, so you can go back later and see what it looked like at that point in time. Whenever you make a change
+            to
+            your file, you create a new version of that file, different from the previous one.
 
-To make a commit, enter:
+            To make a commit, enter:
 
-git commit -m "first commit"
+            git commit -m "first commit"
 
-That's it! You just created a Git commit and included a message that says first commit. You must always write a message in commit; it not only helps you identify a commit, but it also enables you to understand what you did with the file at that point. So tomorrow, if you add a new piece of code in your file, you can write a commit message that says, Added new code, and when you come back in a month to look at your commit history or Git log (the list of commits), you will know what you changed in the files.
-Step 5: Connect your GitHub repo with your computer
+            That's it! You just created a Git commit and included a message that says first commit. You must always
+            write a
+            message in commit; it not only helps you identify a commit, but it also enables you to understand what you
+            did
+            with the file at that point. So tomorrow, if you add a new piece of code in your file, you can write a
+            commit
+            message that says, Added new code, and when you come back in a month to look at your commit history or Git
+            log
+            (the list of commits), you will know what you changed in the files.
+            <h1>Step 5: Connect your GitHub repo with your  computer </h1>
 
-Now, it's time to connect your computer to GitHub with the command:
+            Now, it's time to connect your computer to GitHub with the command:
 
-git remote add origin https://github.com/<your_username>/Demo.git
+            git remote add origin https://github.com/<your_username>/Demo.git
 
-Let's look at this command step by step. We are telling Git to add a remote called origin with the address https://github.com/<your_username>/Demo.git (i.e., the URL of your Git repo on GitHub.com). This allows you to interact with your Git repository on GitHub.com by typing origin instead of the full URL and Git will know where to send your code. Why origin? Well, you can name it anything else if you'd like.
+                Let's look at this command step by step. We are telling Git to add a remote called origin with the
+                address
+                https://github.com/<your_username>/Demo.git (i.e., the URL of your Git repo on GitHub.com). This allows
+                    you
+                    to interact with your Git repository on GitHub.com by typing origin instead of the full URL and Git
+                    will
+                    know where to send your code. Why origin? Well, you can name it anything else if you'd like.
 
-Now we have connected our local copy of the Demo repository to its remote counterpart on GitHub.com. Your terminal looks like this:
+                    Now we have connected our local copy of the Demo repository to its remote counterpart on GitHub.com.
+                    Your terminal looks like this:
 
-git_guide8.png
-Terminal
+                    git_guide8.png
+                    Terminal
 
-Now that we have added the remote, we can push our code (i.e., upload our README.md file) to GitHub.com.
+                    Now that we have added the remote, we can push our code (i.e., upload our README.md file) to
+                    GitHub.com.
 
-Once you are done, your terminal will look like this:
+                    Once you are done, your terminal will look like this:
 
-git_guide9.png
-Terminal
+                    git_guide9.png
+                    Terminal
 
-And if you go to https://github.com/<your_username>/Demo you will see something like this:
+                    And if you go to https://github.com/<your_username>/Demo you will see something like this:
 
-git_guide10.png
-Demo repo on GitHub
+                        git_guide10.png
+                        Demo repo on GitHub
 
-That's it! You have created your first GitHub repo, connected it to your computer, and pushed (or uploaded) a file from your computer to your repository called Demo on GitHub.com. Next time, I will write about Git cloning (downloading your code from GitHub to your computer), adding new files, modifying existing files, and pushing (uploading) files to GitHub.
-    </p>
+                        That's it! You have created your first GitHub repo, connected it to your computer, and pushed
+                        (or
+                        uploaded) a file from your computer to your repository called Demo on GitHub.com. Next time, I
+                        will
+                        write about Git cloning (downloading your code from GitHub to your computer), adding new files,
+                        modifying existing files, and pushing (uploading) files to GitHub.
+        </p>
+    </div>
 </body>
+
 </html>
