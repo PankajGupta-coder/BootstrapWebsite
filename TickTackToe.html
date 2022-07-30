@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        #row {
+            background-color: red;
+            width: 100px;
+        }
+
+        input[type=button] {
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: rgb(129, 24, 24);
+            border: 2px solid;
+            border-radius: 2px;
+            font-size: 35px;
+        }
+
+        .main {
+            width: 300px;
+            margin: auto;
+            background-color: red;
+        }
+
+        #display {
+            width: 100%;
+            height: 50px;
+            font-size: 40px;
+            background-color: cadetblue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <script>
+       function change_color (a,b,c) {
+        document.getElementById("btn" + a).style.backgroundColor = "green"
+        document.getElementById("btn" + b).style.backgroundColor = "green"
+        document.getElementById("btn" + c).style.backgroundColor = "green"
+       }
+        function noclick() {
+            for (i = 1; i <= 9; i++) {
+                console.log("btn" + i)
+                document.getElementById("btn" + i).disabled = "true"
+                document.getElementById("display").style.backgroundColor = "GREEN"
+                var text = document.getElementById("display").innerHTML
+                
+            }
+            alert(text)
+        }
+        function chance_selector() {
+            var x = Math.floor(Math.random() * 2)
+
+            if (x == 1) {
+                console.log("O Turn")
+                document.getElementById("display").innerHTML = "O Turn"
+                return ("O")
+            }
+            else {
+                console.log("X Turn")
+                document.getElementById("display").innerHTML = "X Turn"
+                return ("X")
+            }
+
+        }
+        function check_win() {
+            // THIS IS TO CHEK FOR THE X WINS
+            if (document.getElementById("btn1").value == "X"
+                && document.getElementById("btn2").value == "X"
+                && document.getElementById("btn3").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick()
+                change_color(1,2,3)
+            } else if (document.getElementById("btn4").value == "X"
+                && document.getElementById("btn5").value == "X"
+                && document.getElementById("btn6").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(4,5,6)
+            } else if (document.getElementById("btn7").value == "X"
+                && document.getElementById("btn8").value == "X"
+                && document.getElementById("btn9").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(7,8,9)
+            } else if (document.getElementById("btn1").value == "X"
+                && document.getElementById("btn4").value == "X"
+                && document.getElementById("btn7").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(1,4,7)
+            } else if (document.getElementById("btn2").value == "X"
+                && document.getElementById("btn5").value == "X"
+                && document.getElementById("btn8").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(2,5,8)
+            } else if (document.getElementById("btn3").value == "X"
+                && document.getElementById("btn6").value == "X"
+                && document.getElementById("btn9").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(3,6,9)
+            } else if (document.getElementById("btn1").value == "X"
+                && document.getElementById("btn5").value == "X"
+                && document.getElementById("btn9").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(1,5,9)
+            } else if (document.getElementById("btn3").value == "X"
+                && document.getElementById("btn5").value == "X"
+                && document.getElementById("btn7").value == "X") {
+                document.getElementById("display").innerHTML = "X WINS THE GAME"
+                noclick();
+                change_color(3,5,7)
+            }
+            // THIS IS TO CHECK FOR THE O WINS
+            if (document.getElementById("btn1").value == "O"
+                && document.getElementById("btn2").value == "O"
+                && document.getElementById("btn3").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            } else if (document.getElementById("btn4").value == "O"
+                && document.getElementById("btn5").value == "O"
+                && document.getElementById("btn6").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            } else if (document.getElementById("btn7").value == "O"
+                && document.getElementById("btn8").value == "O"
+                && document.getElementById("btn9").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            } else if (document.getElementById("btn1").value == "O"
+                && document.getElementById("btn4").value == "O"
+                && document.getElementById("btn7").value == "O") {
+                noclick();
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+            } else if (document.getElementById("btn2").value == "O"
+                && document.getElementById("btn5").value == "O"
+                && document.getElementById("btn8").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            } else if (document.getElementById("btn3").value == "O"
+                && document.getElementById("btn6").value == "O"
+                && document.getElementById("btn9").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            } else if (document.getElementById("btn1").value == "O"
+                && document.getElementById("btn5").value == "O"
+                && document.getElementById("btn9").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            } else if (document.getElementById("btn3").value == "O"
+                && document.getElementById("btn5").value == "O"
+                && document.getElementById("btn7").value == "O") {
+                document.getElementById("display").innerHTML = "O WINS THE GAME"
+                noclick();
+            }
+        }
+        function play(btn) {
+            console.log(btn)
+            if (first_chance == "X") {
+                document.getElementById("display").innerHTML = "O Turn"
+                document.getElementById(btn).value = first_chance
+                document.getElementById(btn).disabled = "true"
+                first_chance = "O"
+                check_win()
+            }
+            else {
+                document.getElementById(btn).value = first_chance
+                first_chance = "X"
+                document.getElementById("display").innerHTML = "X Turn"
+                document.getElementById(btn).disabled = "true"
+                check_win()
+            }
+        }
+        function loaded() {
+            first_chance = chance_selector();
+            console.log(first_chance)
+            return first_chance
+        }
+    </script>
+</head>
+
+<body onload=" loaded()">
+    <div id="display">
+
+    </div>
+    <div class="main">
+
+        <div class="frame" id="frame">
+            <table>
+                <tr id="row">
+                    <td> <input type="button" onclick="play('btn1')" id="btn1" value=" "> </td>
+                    <td> <input type="button" onclick="play('btn2')" id="btn2" value=" "> </td>
+                    <td> <input type="button" onclick="play('btn3')" id="btn3" value=" "> </td>
+                </tr>
+                <tr id="row">
+                    <td> <input type="button" onclick="play('btn4')" id="btn4" value=" "> </td>
+                    <td> <input type="button" onclick="play('btn5')" id="btn5" value=" "> </td>
+                    <td> <input type="button" onclick="play('btn6')" id="btn6" value=" "> </td>
+                </tr>
+                <tr id="row">
+                    <td> <input type="button" onclick="play('btn7')" id="btn7" value=" "> </td>
+                    <td> <input type="button" onclick="play('btn8')" id="btn8" value=" "> </td>
+                    <td> <input type="button" onclick="play('btn9')" id="btn9" value=" "> </td>
+                </tr>
+            </table>
+          
+        </div>
+    </div>
+    <input type="button" value="Reset" onclick="rst()">
+
+</body>
